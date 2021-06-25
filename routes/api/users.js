@@ -46,7 +46,7 @@ router.post("/register", async (req, res) => {
       User.confirm_password = hashPassword;
 
       await User.save();
-      //login
+      return res.redirect("/login");
     } else {
       req.flash("error", "Password Not Matched");
       req.flash("name", name);
