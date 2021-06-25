@@ -10,40 +10,8 @@
       </div>
 
       <div class="p-2 bd-highlight">
-        <form class="d-flex search">
-          <input
-            class="form-control me-2 searchField"
-            type="search"
-            placeholder="Search Items.."
-            aria-label="Search"
-          />
-          <button class="btn btn-primary btnSearch" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
-      <div class="p-2 bd-highlight">
         <div class="btn-group dropstart">
-          <button
-            type="button"
-            class="btn"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="fa fa-user" aria-hidden="true"></i>
-
-          </button>
-          <a href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true">
-              <span class="cartCounter">{{ternary
-                  true
-                  session.cart.totalQty
-                  false
-                  0
-                }}
-              </span>
-
-            </i>
-          </a>
+          
 
           <span class="visually-hidden">Toggle Dropdown</span>
 
@@ -63,7 +31,6 @@
                 <a class="dropdown-item" href="/login">Login</a>
               </li>
             {{/if}}
-            <li><a class="dropdown-item" href="/register">Sign Up</a></li>
           </ul>
         </div>
       </div>
@@ -97,26 +64,14 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              All Categories
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">All Products</a></li>
-              <li><a class="dropdown-item" href="#">Papers</a></li>
-              <li><a class="dropdown-item" href="#">Filers</a></li>
-            </ul>
+            
           </li>
           <span class="main-menu"></span>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/shop">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about-us">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact-us">Contact Us</a>
+            <a class="nav-link" href="/match">All Matches</a>
           </li>
         </ul>
       </div>
@@ -135,12 +90,8 @@
       <span class="visually-hidden">Toggle Dropdown</span>
 
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/index">Home</a></li>
-        <li><a class="dropdown-item" href="/shop">Shop</a></li>
-        <li><a class="dropdown-item" href="/about-us">About Us</a></li>
-        <li>
-          <a class="dropdown-item" href="/contact-us">Contact Us</a>
-        </li>
+        <li><a class="dropdown-item" href="/">Home</a></li>
+        <li><a class="dropdown-item" href="/match">All Matches</a></li>
       </ul>
     </div>
   </nav>
