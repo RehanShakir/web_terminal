@@ -22,13 +22,18 @@ router.post("/", async (req, res) => {
     console.log("In try");
 
     let Match = new MatchModel();
-    Match.team1 = req.body.team1;
-    Match.team2 = req.body.team2;
-    Match.city = req.body.city;
-    Match.date = req.body.date;
+    if (req.body.team1 === req.body.team2) {
+      req.flash("error", "Team 1 and Team 2 Must Be Different");
+      return res.redirect("/match");
+    } else {
+      Match.team1 = req.body.team1;
+      Match.team2 = req.body.team2;
+      Match.city = req.body.city;
+      Match.date = req.body.date;
 
-    await Match.save();
-    return res.send(Match);
+      await Match.save();
+      return res.send(Match);
+    }
   } catch (error) {
     res.send(error);
   }

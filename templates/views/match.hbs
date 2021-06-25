@@ -16,8 +16,10 @@
         <div class="fadeIn first">
           <img class="loginFormImage" src="./images/logo.png" />
         </div>
+        {{#if messages.error}}
+          <span class="registerSpan"><strong>{{messages.error}}</strong></span><br>
+        {{/if}}
         <h2>Add a New Match</h2>
-
         <!-- Login Form -->
         <form action="/api/matches" method="POST" >
            <select id="payment" name="team1">
