@@ -15,7 +15,7 @@ router.get("/allMatches", matchController().match, (req, res) => {
   res.render("allMatches");
 });
 
-router.get("/login", authentication.checkNotAuthenticated, (req, res) => {
+router.get("/login", (req, res) => {
   res.render("login");
 });
 router.post("/logout", (req, res) => {
