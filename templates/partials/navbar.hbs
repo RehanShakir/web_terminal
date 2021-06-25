@@ -2,7 +2,7 @@
   <div class="container-fluid headerTop">
     <div class="d-flex flex-row bd-highlight mb-3 justify-content-between">
       <div class="p-2 bd-highlight">
-        <a class="navbar-brand" href="/"><img
+        <a class="navbar-brand" href="/index"><img
             class="navbarImg"
             src="./images/logo.png"
             alt="logo"
@@ -10,28 +10,19 @@
       </div>
 
       <div class="p-2 bd-highlight">
+        <form class="d-flex search">
+        </form>
+      </div>
+      <div class="p-2 bd-highlight">
         <div class="btn-group dropstart">
-          
+          <button
+            type="button"
+            class="btn"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+          </button>
 
-          <span class="visually-hidden">Toggle Dropdown</span>
-
-          <ul class="dropdown-menu">
-            {{#if user}}
-              <li>
-                <form id="logout" action="/logout" method="POST">
-                  <a
-                    onclick="document.getElementById('logout').submit()"
-                    class="dropdown-item"
-                    style="cursor:pointer"
-                  >Logout</a>
-                </form>
-              </li>
-            {{else}}
-              <li>
-                <a class="dropdown-item" href="/login">Login</a>
-              </li>
-            {{/if}}
-          </ul>
         </div>
       </div>
     </div>
@@ -56,22 +47,17 @@
       >
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown myDropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
             
-          </li>
           <span class="main-menu"></span>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/">Home</a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="/match">All Matches</a>
+            <a class="nav-link" href="/allMatches">All Matches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
           </li>
         </ul>
       </div>
@@ -90,8 +76,9 @@
       <span class="visually-hidden">Toggle Dropdown</span>
 
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/">Home</a></li>
-        <li><a class="dropdown-item" href="/match">All Matches</a></li>
+        <li><a class="dropdown-item" href="/allMatch">Home</a></li>
+        <li><a class="dropdown-item" href="/macth">Add A Match</a></li>
+        
       </ul>
     </div>
   </nav>
