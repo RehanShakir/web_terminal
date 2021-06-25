@@ -22,7 +22,7 @@ router.post("/logout", (req, res) => {
   req.logout();
   res.redirect("/login");
 });
-router.get("/register", authentication.checkNotAuthenticated, (req, res) => {
+router.get("/register", (req, res) => {
   res.render("register");
 });
 
