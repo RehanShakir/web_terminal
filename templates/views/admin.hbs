@@ -3,7 +3,7 @@
     {{>header}}
     <script src="./js/script.js"></script>
 
-    <title>Contact Us</title>
+    <title>Add Match</title>
   </head>
   <body>
      {{>adminNavBar}}
@@ -16,52 +16,44 @@
         <div class="fadeIn first">
           <img class="loginFormImage" src="./images/logo.png" />
         </div>
-        <h2>Add a  New Product</h2>
-
+        {{#if messages.error}}
+          <span class="registerSpan"><strong>{{messages.error}}</strong></span><br>
+        {{/if}}
+        <h2>Add a New Match</h2>
         <!-- Login Form -->
-        <form action="/api/products" method="POST" encType="multipart/form-data">
-          <input
-            type="text"
-            id="title"
-            class="fadeIn second"
-            name="name"
-            placeholder="Name of Product"
-          />
-          <input
-            type="number"
-            id="price"
-            class="fadeIn second"
-            name="price"
-            placeholder="Price"
-          />
-          <input
+        <form action="/api/matches" method="POST" >
+           <select id="payment" name="team1">
+            <option value="Quetta Gladiators">Quetta Gladiators</option>
+            <option value="Peshawar Zalmi">Peshawar Zalmi</option>
+            <option value="Lahore Qalandars">Lahore Qalandars</option>
+            <option value="Karachi Kings">Karachi Kings</option>
+            <option value="Multan Sultans">Multan Sultans</option>
+            <option value="Islamabad United">Islamabad United</option>
+          </select>
+           <select id="payment" name="team2">
+            <option value="Quetta Gladiators">Quetta Gladiators</option>
+            <option value="Peshawar Zalmi">Peshawar Zalmi</option>
+            <option value="Lahore Qalandars">Lahore Qalandars</option>
+            <option value="Karachi Kings">Karachi Kings</option>
+            <option value="Multan Sultans">Multan Sultans</option>
+            <option value="Islamabad United">Islamabad United</option>
+          </select>
+                <input
             type="text"
             id="category"
             class="fadeIn second"
-            name="category"
-            placeholder="Category"
+            name="city"
+            placeholder="City"
           />
           <input
             type="text"
             id="tags"
             class="fadeIn third"
-            name="tags"
-            placeholder="Tags"
+            name="date"
+            placeholder="Date"
           />
-          <input
-            type="text"
-            id="stock"
-            class="fadeIn third"
-            name="stock"
-            placeholder="Stock"
-          />
-          <input
-            type="file"
-            id="photo"
-            class="fadeIn third"
-            name="photo"
-          />
-          <button type="submit" class="fadeIn fourth myBtn" value="Register">Add Product</button>
+          
+          <button type="submit" class="fadeIn fourth myBtn" value="Register">Add Match</button>
         </form>
 
       </div>
