@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    {{>header}}
+    <script src="./js/script.js"></script>
+
+    <title>Add Match</title>
+  </head>
+  <body>
+     {{>adminNavBar}}
+    <!--Main-->
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img class="loginFormImage" src="./images/logo.png" />
+        </div>
+        <h2>Add a New Match</h2>
+
+        <!-- Login Form -->
+        <form action="/api/matches" method="POST" >
+           <select id="payment" name="team1">
+            <option value="Quetta Gladiators">Quetta Gladiators</option>
+            <option value="Peshawar Zalmi">Peshawar Zalmi</option>
+            <option value="Lahore Qalandars">Lahore Qalandars</option>
+            <option value="Karachi Kings">Karachi Kings</option>
+            <option value="Multan Sultans">Multan Sultans</option>
+            <option value="Islamabad United">Islamabad United</option>
+          </select>
+           <select id="payment" name="team2">
+            <option value="Quetta Gladiators">Quetta Gladiators</option>
+            <option value="Peshawar Zalmi">Peshawar Zalmi</option>
+            <option value="Lahore Qalandars">Lahore Qalandars</option>
+            <option value="Karachi Kings">Karachi Kings</option>
+            <option value="Multan Sultans">Multan Sultans</option>
+            <option value="Islamabad United">Islamabad United</option>
+          </select>
+        <input
+            type="text"
+            id="category"
+            class="fadeIn second"
+            name="city"
+            placeholder="City"
+          />
+          <input
+            type="text"
+            id="tags"
+            class="fadeIn third"
+            name="date"
+            placeholder="Date"
+          />
+          
+          <button type="submit" class="fadeIn fourth myBtn" value="Register">Add Match</button>
+        </form>
+
+      </div>
+    </div>
+     {{>footer}}
+  </body>
+</html>

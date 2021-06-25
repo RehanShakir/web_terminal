@@ -3,7 +3,7 @@ const router = express.Router();
 
 //const authController = require("../app/http/authController");
 // const cartController = require("../app/http/customers/cartController");
-const shopController = require("../app/http/shopController");
+// const shopController = require("../app/http/shopController");
 const authentication = require("../app/middlewares/userAuthentication");
 // const orderController = require("../app/http/customers/orderController");
 
@@ -11,7 +11,7 @@ const authentication = require("../app/middlewares/userAuthentication");
 router.get("/", (req, res) => {
   res.render("index");
 });
-router.get("/shop", shopController().shop);
+// router.get("/shop", shopController().shop);
 
 router.get("/admin", authentication.checkAuthenticated, (req, res) => {
   res.render("admin");
@@ -28,14 +28,8 @@ router.get("/register", authentication.checkNotAuthenticated, (req, res) => {
   res.render("register");
 });
 
-//Customer Routes
-// router.post("/orders", orderController().order);
-// router.get("/order", orderController().index);
-
-// // router.get("*", (req, res) => {
-// //   res.render("404", {
-// //     errorcomment: "Opps, Page Not Found",
-// //   });
-// // });
+router.get("/match", (req, res) => {
+  res.render("match");
+});
 
 module.exports = router;
