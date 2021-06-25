@@ -5,6 +5,10 @@ function matchController() {
       const matches = await Match.find();
       return res.render("allMatches", { matches: matches });
     },
+    async index(req, res) {
+      const matches = await Match.find();
+      return res.render("index", { matches: matches });
+    },
   };
 }
 

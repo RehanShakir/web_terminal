@@ -4,7 +4,7 @@ const router = express.Router();
 const authentication = require("../app/middlewares/userAuthentication");
 const matchController = require("../app/http/matchController");
 
-router.get("/", (req, res) => {
+router.get("/", matchController().index, (req, res) => {
   res.render("index");
 });
 
